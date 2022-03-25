@@ -6,6 +6,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
 }
 /* 
@@ -31,7 +32,11 @@ html {
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
+}
+
+.pull-right {
+  float: right !important;
 }
 
 .row {
@@ -70,6 +75,24 @@ html {
 .mt-16 {
   margin-top: 16px !important;
 }
+
+.btn {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  padding: 11px 16px;
+  display: inline-block;
+  margin-top: 15px;
+  border: none;
+  font-size: 15px;
+}
+
+.btn:hover {
+  color: #000;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
 /* main */
 #main {
 }
@@ -191,7 +214,7 @@ html {
 
 #content .content-section {
   width: 800px;
-  padding: 64px 0px;
+  padding: 64px 0 112px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -270,7 +293,6 @@ html {
 
 .places-list {
   margin-top: 32px;
-  margin-bottom: 48px;
 }
 
 .place-img {
@@ -303,21 +325,6 @@ html {
   line-height: 1.4;
 }
 
-.place-buy-btn {
-  color: #fff;
-  background-color: #000;
-  text-decoration: none;
-  padding: 11px 16px;
-  display: inline-block;
-  margin-top: 15px;
-  border: none;
-  font-size: 17px;
-}
-
-.place-buy-btn:hover {
-  color: #000;
-  background-color: #ccc;
-}
 
 /* Modal ticket */
 .modal {
@@ -445,18 +452,35 @@ html {
   width: 100%;
 }
 
-.contact-form .form-submit-btn{
-  background-color: #000;
-  color:#fff ;
-  border: 1px solid #ccc;
-  padding:10px 16px;
-  float: right;
+/* Map section */
+.map-section img{
+  width: 100%;
 }
 
-.form-submit-btn:hover {
-  background-color: #ccc;
-  color:#000 ;
-}
 /* Footer */
 #footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+#footer .socials-list {
+  font-size: 20px;
+}
+
+#footer .socials-list a {
+  color: #757575;
+  text-decoration: none;
+}
+
+#footer .socials-list a:hover {
+  opacity: 0.5;
+}
+
+#footer .copyright{
+  margin-top: 15px;
+  color: #757575;
+}
+
+#footer .copyright a {
+  color: #757575;
 }
