@@ -69,8 +69,8 @@
             ea commodo consequat.
           </p>
 
-          <div class="members-list">
-            <div class="member-item">
+          <div class="row members-list">
+            <div class="col col-third text-center">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/Team/member.jpg"
@@ -78,7 +78,7 @@
                 class="member-img"
               />
             </div>
-            <div class="member-item">
+            <div class="col col-third text-center">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/Team/member.jpg"
@@ -86,7 +86,7 @@
                 class="member-img"
               />
             </div>
-            <div class="member-item">
+            <div class="col col-third text-center">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/Team/member.jpg"
@@ -94,7 +94,7 @@
                 class="member-img"
               />
             </div>
-            <div class="clear"></div>
+
           </div>
         </div>
 
@@ -114,8 +114,8 @@
             </ul>
 
             <!-- Places -->
-            <div class="places-list">
-              <div class="place-item">
+            <div class="row places-list">
+              <div class="col col-third">
                 <img
                   src="./assets/img/places/newyork.jpg"
                   alt="New York"
@@ -133,7 +133,7 @@
                 </div>
               </div>
 
-              <div class="place-item">
+              <div class="col col-third">
                 <img
                   src="./assets/img/places/paris.jpg"
                   alt="New York"
@@ -151,7 +151,7 @@
                 </div>
               </div>
 
-              <div class="place-item">
+              <div class="col col-third">
                 <img
                   src="./assets/img/places/sanfran.jpg"
                   alt="New York"
@@ -169,7 +169,6 @@
                 </div>
               </div>
 
-              <div class="clear"></div>
             </div>
           </div>
         </div>
@@ -178,10 +177,39 @@
         <div class="content-section">
           <h2 class="section-heading">CONTACT</h2>
           <p class="section-sub-heading">Fan? Drop a note!</p>
+
+          <div class="row contact-content">
+            <div class="col col-half contact-info">
+              <p><i class="ti-location-pin"></i>Chicago, US</p>
+              <p><i class="ti-mobile"></i>Phone: +00 151515</p>
+              <p><i class="ti-email"></i>Email: mail@mail.com</p>
+            </div>
+            <div class="col col-half contact-form">
+              <form action="">
+                <div class="row">
+                  <div class="col col-half">
+                    <input type="text" placeholder="Name" name="" required id="" class="form-control">
+                  </div>
+                  <div class="col col-half">
+                    <input type="email" placeholder="Email" name="" required id="" class="form-control">
+                  </div>
+                </div>
+                <div class="row mt-8">
+                  <div class="col col-full">
+                    <input type="text" placeholder="Message" name="" required id="" class="form-control">
+                  </div>
+                </div>
+                <input class="form-submit-btn mt-16" type="submit" value="SEND">
+              </form>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <div id="footer"></div>
+      <div id="footer">
+
+      </div>
     </div>
 
     <!-- Modal Tickets -->
@@ -228,6 +256,7 @@
       </div>
     </div>
 
+    <!-- script modal -->
     <script>
       const buyBtns = document.querySelectorAll('.js-buy-ticket')
       const modal = document.querySelector('.modal')
@@ -250,7 +279,7 @@
       modal_close.addEventListener('click',hideBuyTickets);
 
 
-      
+
       // khi các tạo ra sk của thẻ con,thì vẫn nghe sk thẻ cha (sk nổi bọt)
       // sk nổi bọt: nổi từ đáy ra các thẻ cha-từ đáy hồ đến mặt hồ thì thôi
       modal.addEventListener('click',hideBuyTickets);
@@ -259,5 +288,6 @@
         event.stopPropagation();
       })
     </script>
+
   </body>
 </html>
