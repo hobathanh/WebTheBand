@@ -471,6 +471,15 @@ html {
   display: inline-block;
 }
 
+.contact-info a {
+  color: #0055f2;
+  opacity: 1;
+}
+
+.contact-info a:hover {
+  opacity: 0.7;
+}
+
 .contact-form{
   font-size: 15px;
 }
