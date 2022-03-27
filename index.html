@@ -7,6 +7,7 @@
     <title>The Band</title>
     <link rel="icon" href="./assets/img/icon/electric-guitar.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link
       rel="stylesheet"
       href="./assets/font/themify-icons-font/themify-icons/themify-icons.css"
@@ -35,10 +36,16 @@
         </ul>
         <!-- End Nav -->
 
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu-btn">
+          <i class="menu-icon ti-menu"></i>
+        </div>
         <!-- Begin: Search button -->
         <div class="search-btn">
           <i class="search-icon ti-search"></i>
         </div>
+
+    
         <!-- End: Search button -->
       </div>
 
@@ -304,5 +311,39 @@
       })
     </script>
 
+    <!-- js menu icon mobile -->
+    <script>
+      var header = document.getElementById('header');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var headerHeight = header.clientHeight;
+
+      //đóng mở mobile menu+
+      mobileMenu.onclick = function(){
+        var isClosed = header.clientHeight === headerHeight;
+        if (isClosed) {
+          header.style.height = 'auto';
+        }
+        else {
+          header.style.height = null;
+        }
+      }
+
+      //tự động đóng khi chọn menu
+      var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+      for (var i  = 0; i <menuItems.length; i++) {
+        var menuItem = menuItems[i];
+        
+        
+
+        menuItem.onclick = function(event) {
+          var isParentMenu =this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+          if (isParentMenu){
+            event.preventDefault(); //bỏ qua mặc định,hay bỏ qua thẻ a href=#
+          } else{
+            header.style.height = null;
+          }
+        }
+      }
+    </script>
   </body>
 </html>
